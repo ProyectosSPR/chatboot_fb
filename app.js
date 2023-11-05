@@ -5,7 +5,7 @@ const port = process.env.PORT || 8080; // Utiliza el puerto proporcionado por la
  
 
 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 
 // Endpoint para recibir eventos del webhook de Facebook
 app.post('/webhook', (req, res) => {
@@ -37,10 +37,10 @@ app.get('/webhook', (req, res) => {
   }
 });
 
-// Ruta para enviar el archivo HTML
-   app.get('/', (req, res) => {
-   res.sendFile(__dirname + '/index.html'); // Especifica la ruta al archivo HTML
- });
+// // Ruta para enviar el archivo HTML
+//    app.get('/', (req, res) => {
+//    res.sendFile(__dirname + '/index.html'); // Especifica la ruta al archivo HTML
+//  });
 
 // Iniciar el servidor
 app.listen(port, () => {
