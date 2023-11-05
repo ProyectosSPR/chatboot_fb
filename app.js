@@ -38,9 +38,9 @@ app.get('/', (req, res) => {
 });
 
 // // Ruta para enviar el archivo HTML
-//    app.get('/', (req, res) => {
-//    res.sendFile(__dirname + '/index.html'); // Especifica la ruta al archivo HTML
-//  });
+app.get('/', (req, res) => {
+  res.status(200).send('Hola Mundo!');
+});
 
 // Iniciar el servidor
 app.listen(port, () => {
