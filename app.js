@@ -21,7 +21,7 @@ app.post('/webhook', (req, res) => {
         res.sendStatus(404);
     }
 });
-app.get('/s', (req, res) => {
+app.get('/', (req, res) => {
   console.log('GET: webhook');
   const VERIFY_TOKEN = 'sergioEmiliano';
   const mode = req.query['hub.mode'];
