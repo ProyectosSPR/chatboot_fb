@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 3000; // Utiliza el puerto proporcionado por la variable de entorno PORT, o 3000 si no está definido
+const port = process.env.PORT || 8080; // Utiliza el puerto proporcionado por la variable de entorno PORT, o 3000 si no está definido
  
 
 
