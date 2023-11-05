@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080; // Utiliza el puerto proporcionado por la
 app.use(bodyParser.json()); 
 
 // Endpoint para recibir eventos del webhook de Facebook
-app.post('/webhook', (req, res) => {
+app.post('/', (req, res) => {
   console.log('POST: webhook');
     const body = req.body;
     if (body.object === 'page') {
