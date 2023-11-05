@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Utiliza el puerto proporcionado por la variable de entorno PORT, o 3000 si no está definido
 
 // Ruta para enviar el archivo HTML
 app.get('/', (req, res) => {
