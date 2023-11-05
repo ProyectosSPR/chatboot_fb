@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080; // Utiliza el puerto proporcionado por la
 app.use(bodyParser.json()); 
 
 // Endpoint para recibir eventos del webhook de Facebook
-app.post('/', (req, res) => {
+app.post('/webhook', (req, res) => {
   console.log('POST: webhook');
     const body = req.body;
     if (body.object === 'page') {
@@ -21,7 +21,7 @@ app.post('/', (req, res) => {
         res.sendStatus(404);
     }
 });
-app.get('/', (req, res) => {
+app.get('/webhook', (req, res) => {
   console.log('GET: webhook');
   const VERIFY_TOKEN = 'sergioEmiliano';
   const mode = req.query['hub.mode'];
